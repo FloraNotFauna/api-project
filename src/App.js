@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
 
 class App extends React.Component {
@@ -12,8 +11,9 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("https://itunes.apple.com/search?term=jack+johnson&limit=25")
-      .then(results); {
-          return results.json();{then(data => {
+      .then(results => {
+          return results.json();
+      }).then(data => {
           let items = data.results.map((item) => {
             return(
               <div >
@@ -26,7 +26,7 @@ class App extends React.Component {
         });
   };
 
-  render(); {
+  render() {
       return (
         <div className= "bodydiv">
         <div className= "titlediv">
@@ -43,4 +43,5 @@ class App extends React.Component {
       );
     }
   }
-  }}
+  
+  export default App;
