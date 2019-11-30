@@ -12,23 +12,21 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("https://itunes.apple.com/search?term=jack+johnson&limit=25")
-      .then(results) => {
-          return results.json();
-        }).then(data => {
+      .then(results); {
+          return results.json();{then(data => {
           let items = data.results.map((item) => {
             return(
-              <div key={item.results}>
-                <h1 key={item.results}>${items.results.trackName}</h1>
+              <div >
+                <h1>${items.results.trackName}</h1>
               </div>
             )
           })
-        (items) => {
           this.setState({items : items});
           console.log("state", this.state.items);
-        })
-  }
+        });
+  };
 
-  render() {
+  render(); {
       return (
         <div className= "bodydiv">
         <div className= "titlediv">
@@ -36,7 +34,7 @@ class App extends React.Component {
           
         </div>
         <div className= "container1">
-          <div> className= "container2">
+          <div className= "container2">
             {this.state.items}
           </div>
           <div> </div>
@@ -45,7 +43,4 @@ class App extends React.Component {
       );
     }
   }
-}
-
-
-export default App;
+  }}
