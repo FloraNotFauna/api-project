@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -18,7 +18,7 @@ class App extends Component {
           let items = data.results.map((item) => {
             return(
               <div key={item.results}>
-                <img src={item.results.} />
+                <h1 key={item.results}>${items.results.trackName}</h1>
               </div>
             )
           })
